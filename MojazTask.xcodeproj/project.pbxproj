@@ -13,6 +13,7 @@
 		16F4EC2020BB0A52001A27BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F4EC1F20BB0A52001A27BF /* Assets.xcassets */; };
 		16F4EC2320BB0A52001A27BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F4EC2120BB0A52001A27BF /* LaunchScreen.storyboard */; };
 		16F4EC2F20BB0AE8001A27BF /* NetworkServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4EC2E20BB0AE8001A27BF /* NetworkServiceLayer.swift */; };
+		16F4EC3120BB3616001A27BF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4EC3020BB3616001A27BF /* Photo.swift */; };
 		3A56FFA98FE73DAD9A55B1CE /* Pods_MojazTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B8F9C2A25B6713748D5D8F /* Pods_MojazTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		16F4EC2220BB0A52001A27BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16F4EC2420BB0A52001A27BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F4EC2E20BB0AE8001A27BF /* NetworkServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceLayer.swift; sourceTree = "<group>"; };
+		16F4EC3020BB3616001A27BF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		25ABCFFACCD7C174A7B4AAB4 /* Pods-MojazTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MojazTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-MojazTask/Pods-MojazTask.release.xcconfig"; sourceTree = "<group>"; };
 		49B8F9C2A25B6713748D5D8F /* Pods_MojazTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MojazTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1919F9EE982101CB4B42841 /* Pods-MojazTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MojazTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MojazTask/Pods-MojazTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		16F4EC2A20BB0A68001A27BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				16F4EC3020BB3616001A27BF /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F4EC3120BB3616001A27BF /* Photo.swift in Sources */,
 				16F4EC2F20BB0AE8001A27BF /* NetworkServiceLayer.swift in Sources */,
 				16F4EC1B20BB0A52001A27BF /* ImageListController.swift in Sources */,
 				16F4EC1920BB0A52001A27BF /* AppDelegate.swift in Sources */,

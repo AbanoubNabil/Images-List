@@ -13,10 +13,12 @@ class NetworkServiceLayer: NSObject {
     
     
     func fetchRequest(completion: @escaping (JSON) -> Void , myurl : String) {
+        
         guard let url = URL(string: myurl) else {
             completion(JSON.null)
             return
         }
+        
         //make a request
         Alamofire.request(url,method: .get).validate().responseJSON { response in
             //1 check result
@@ -28,6 +30,8 @@ class NetworkServiceLayer: NSObject {
             //2 result value
             let json = JSON(response.value!)
             completion(json)
+            }.stream { (data) in
+                print(String(data: data, encoding: String.Encoding.utf8) ?? "No data")
         }
     }
 }
