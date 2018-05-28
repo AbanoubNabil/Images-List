@@ -17,12 +17,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nKu-uK-GbL">
+                                <rect key="frame" x="16" y="20" width="343" height="543"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="110" id="tMA-po-0NG">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tMA-po-0NG" id="msj-19-gyx">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfw-Gu-WwZ" customClass="ImageCell" customModule="MojazTask" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="4" width="327" height="102"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rfw-Gu-WwZ" firstAttribute="top" secondItem="msj-19-gyx" secondAttribute="top" constant="4" id="7ap-eO-UZX"/>
+                                                <constraint firstAttribute="trailing" secondItem="rfw-Gu-WwZ" secondAttribute="trailing" constant="8" id="aY2-hN-YzN"/>
+                                                <constraint firstAttribute="bottom" secondItem="rfw-Gu-WwZ" secondAttribute="bottom" constant="4" id="pAV-yN-ERG"/>
+                                                <constraint firstItem="rfw-Gu-WwZ" firstAttribute="leading" secondItem="msj-19-gyx" secondAttribute="leading" constant="8" id="sNt-Ll-ggI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gTy-Bd-hvM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RPo-Qw-8G6"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2m-PD-lsa">
+                                <rect key="frame" x="137" y="598" width="102" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="save">
+                                    <color key="titleColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F2m-PD-lsa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="CWf-0z-D30"/>
+                            <constraint firstItem="F2m-PD-lsa" firstAttribute="top" secondItem="nKu-uK-GbL" secondAttribute="bottom" constant="35" id="HDV-xf-KVb"/>
+                            <constraint firstItem="F2m-PD-lsa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HYa-pv-56S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F2m-PD-lsa" secondAttribute="trailing" constant="136" id="PfD-eR-pZm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F2m-PD-lsa" secondAttribute="bottom" constant="30" id="l4H-LZ-5Ae"/>
+                            <constraint firstItem="nKu-uK-GbL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="moU-fN-M8e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nKu-uK-GbL" secondAttribute="trailing" constant="16" id="nTa-Ud-BBz"/>
+                            <constraint firstItem="nKu-uK-GbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="plZ-6m-UXi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageListTable" destination="nKu-uK-GbL" id="AOY-eJ-Woi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
