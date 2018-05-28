@@ -13,28 +13,24 @@ class ImageListController : UIViewController, UITableViewDelegate, UITableViewDa
    
     
     @IBOutlet weak var imageListTable: UITableView!
-    
-    var networkObj = NetworkServiceLayer()
-    
-    lazy var handlerBlock: (JSON) -> Void = { items in
-        print("test url \(items)")
-    }
+    var viewmodel = ImageViewMode()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        networkObj.fetchRequest(completion: handlerBlock, myurl: "https://jsonplaceholder.typicode.com/photos")
-        
+       viewmodel.getDataFromAPI()
     }
 
 }
 extension ImageListController{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return (viewmodel.photos.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let phototitle = cell.viewWithTag(2) as! UILabel
+        phototitle.text = viewmodel.photos[indexPath.row].title
         return cell
     }
     
@@ -44,4 +40,5 @@ extension ImageListController{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
+  
 }

@@ -13,7 +13,6 @@ class NetworkServiceLayer: NSObject {
     
     
     func fetchRequest(completion: @escaping (JSON) -> Void , myurl : String) {
-        
         guard let url = URL(string: myurl) else {
             completion(JSON.null)
             return
@@ -27,11 +26,14 @@ class NetworkServiceLayer: NSObject {
                 completion(JSON.null)
                 return
             }
+            
             //2 result value
-            let json = JSON(response.value!)
+            let json = JSON(response.value ?? JSON.null)
             completion(json)
-            }.stream { (data) in
-                print(String(data: data, encoding: String.Encoding.utf8) ?? "No data")
-        }
+            
+            }
+//            .stream { (data) in
+//                print(String(data: data, encoding: String.Encoding.utf8) ?? "No data")
+//        }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1665554720BC408300D9811E /* ImageViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1665554620BC408200D9811E /* ImageViewMode.swift */; };
 		16708FD120BB86DE004600D8 /* Rounded+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16708FD020BB86DE004600D8 /* Rounded+UIButton.swift */; };
 		16F4EC1920BB0A52001A27BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4EC1820BB0A52001A27BF /* AppDelegate.swift */; };
 		16F4EC1B20BB0A52001A27BF /* ImageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4EC1A20BB0A52001A27BF /* ImageListController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1665554620BC408200D9811E /* ImageViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewMode.swift; sourceTree = "<group>"; };
 		16708FD020BB86DE004600D8 /* Rounded+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rounded+UIButton.swift"; sourceTree = "<group>"; };
 		16F4EC1520BB0A52001A27BF /* MojazTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojazTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F4EC1820BB0A52001A27BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16323A1F20BCB0E400D01AB2 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		16F4EC0C20BB0A52001A27BF = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +82,7 @@
 		16F4EC1720BB0A52001A27BF /* MojazTask */ = {
 			isa = PBXGroup;
 			children = (
+				16323A1F20BCB0E400D01AB2 /* Delegates */,
 				16F4EC2D20BB0ABE001A27BF /* Helper */,
 				16F4EC2C20BB0AA8001A27BF /* ViewModel */,
 				16F4EC2B20BB0A76001A27BF /* View */,
@@ -109,6 +119,7 @@
 		16F4EC2C20BB0AA8001A27BF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1665554620BC408200D9811E /* ImageViewMode.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -273,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F4EC3120BB3616001A27BF /* Photo.swift in Sources */,
+				1665554720BC408300D9811E /* ImageViewMode.swift in Sources */,
 				16708FD120BB86DE004600D8 /* Rounded+UIButton.swift in Sources */,
 				16F4EC2F20BB0AE8001A27BF /* NetworkServiceLayer.swift in Sources */,
 				16F4EC1B20BB0A52001A27BF /* ImageListController.swift in Sources */,
