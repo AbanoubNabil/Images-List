@@ -9,16 +9,21 @@
 import UIKit
 import SwiftyJSON
 
-class ImageListController : UIViewController, UITableViewDelegate, UITableViewDataSource{
-   
+class ImageListController : UIViewController, UITableViewDelegate, UITableViewDataSource, UpdatePhotoListDelegate{
     
     @IBOutlet weak var imageListTable: UITableView!
     var viewmodel = ImageViewMode()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       viewmodel.getDataFromAPI()
+        viewmodel.getDataFromAPI()
+        viewmodel.viewControllerDelegate = self
     }
+    func updateList() {
+        self.imageListTable.reloadData()
+    }
+    
+    
 
 }
 extension ImageListController{
