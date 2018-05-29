@@ -32,8 +32,5 @@ class NetworkServiceLayer: NSObject {
             completion(json)
             
             }
-//            .stream { (data) in
-//                print(String(data: data, encoding: String.Encoding.utf8) ?? "No data")
-//        }
     }
 }

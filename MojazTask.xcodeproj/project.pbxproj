@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		163129D220BCF1B5005E0923 /* UpdateUI+NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163129D120BCF1B5005E0923 /* UpdateUI+NotificationCenter.swift */; };
 		16323A2120BCB1D100D01AB2 /* UpdatePhotoListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16323A2020BCB1D100D01AB2 /* UpdatePhotoListDelegate.swift */; };
-		1665554720BC408300D9811E /* ImageViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1665554620BC408200D9811E /* ImageViewMode.swift */; };
+		1665554720BC408300D9811E /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1665554620BC408200D9811E /* ImageViewModel.swift */; };
 		16708FD120BB86DE004600D8 /* Rounded+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16708FD020BB86DE004600D8 /* Rounded+UIButton.swift */; };
 		16F4EC1920BB0A52001A27BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4EC1820BB0A52001A27BF /* AppDelegate.swift */; };
 		16F4EC1B20BB0A52001A27BF /* ImageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4EC1A20BB0A52001A27BF /* ImageListController.swift */; };
@@ -24,8 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		163129D120BCF1B5005E0923 /* UpdateUI+NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateUI+NotificationCenter.swift"; sourceTree = "<group>"; };
 		16323A2020BCB1D100D01AB2 /* UpdatePhotoListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePhotoListDelegate.swift; sourceTree = "<group>"; };
-		1665554620BC408200D9811E /* ImageViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewMode.swift; sourceTree = "<group>"; };
+		1665554620BC408200D9811E /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		16708FD020BB86DE004600D8 /* Rounded+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rounded+UIButton.swift"; sourceTree = "<group>"; };
 		16F4EC1520BB0A52001A27BF /* MojazTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojazTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F4EC1820BB0A52001A27BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		163129D020BCF185005E0923 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				16708FD020BB86DE004600D8 /* Rounded+UIButton.swift */,
+				163129D120BCF1B5005E0923 /* UpdateUI+NotificationCenter.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		16323A1F20BCB0E400D01AB2 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 		16F4EC1720BB0A52001A27BF /* MojazTask */ = {
 			isa = PBXGroup;
 			children = (
+				163129D020BCF185005E0923 /* Extentions */,
 				16323A1F20BCB0E400D01AB2 /* Delegates */,
 				16F4EC2D20BB0ABE001A27BF /* Helper */,
 				16F4EC2C20BB0AA8001A27BF /* ViewModel */,
@@ -114,7 +126,6 @@
 			children = (
 				16F4EC3220BB395B001A27BF /* ImageCell.xib */,
 				16F4EC3820BB3FFB001A27BF /* ImageCell.swift */,
-				16708FD020BB86DE004600D8 /* Rounded+UIButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,7 +133,7 @@
 		16F4EC2C20BB0AA8001A27BF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1665554620BC408200D9811E /* ImageViewMode.swift */,
+				1665554620BC408200D9811E /* ImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,13 +298,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F4EC3120BB3616001A27BF /* Photo.swift in Sources */,
-				1665554720BC408300D9811E /* ImageViewMode.swift in Sources */,
+				1665554720BC408300D9811E /* ImageViewModel.swift in Sources */,
 				16708FD120BB86DE004600D8 /* Rounded+UIButton.swift in Sources */,
 				16323A2120BCB1D100D01AB2 /* UpdatePhotoListDelegate.swift in Sources */,
 				16F4EC2F20BB0AE8001A27BF /* NetworkServiceLayer.swift in Sources */,
 				16F4EC1B20BB0A52001A27BF /* ImageListController.swift in Sources */,
 				16F4EC1920BB0A52001A27BF /* AppDelegate.swift in Sources */,
 				16F4EC3D20BB4B2C001A27BF /* fnTableViewController.swift in Sources */,
+				163129D220BCF1B5005E0923 /* UpdateUI+NotificationCenter.swift in Sources */,
 				16F4EC3920BB3FFB001A27BF /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

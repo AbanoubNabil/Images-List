@@ -15,15 +15,7 @@ class ImageCell: UIView {
     let unCheckImg = UIImage(named: "circle") as UIImage?
    
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var chechOutlt: UIButton!
-    @IBAction func ckeckAction(_ sender: Any) {
-        btn_flag = !btn_flag
-        if btn_flag {
-            chechOutlt.setBackgroundImage(checkImg, for: .normal)
-        }else{
-            chechOutlt.setBackgroundImage(unCheckImg, for: .normal)
-        }
-    }
+  
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()

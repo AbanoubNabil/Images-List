@@ -13,17 +13,20 @@ class Photo: NSObject {
     var id : Int
     var title : String
     var url : String
+    var placeholder : String
     override init() {
         album_id = 0
         id=0
         title="default"
         url=""
+        placeholder=""
     }
-    init(id : Int, albumid: Int, title: String, url: String) {
+    init(id : Int, albumid: Int, title: String, url: String, placeholder : String) {
         self.album_id = albumid
         self.id=id
         self.title = title
         self.url=url
+        self.placeholder=placeholder
     }
     init(dictionary: [String:Any])
     {
@@ -31,7 +34,7 @@ class Photo: NSObject {
         id = dictionary["id"] as! Int
         title = dictionary["title"] as! String
         url = dictionary["url"] as! String
-        print("here is \(id)")
+        placeholder = dictionary["thumbnailUrl"] as! String
     }
     public class func modelsFromArray(array:[[String:Any]]) -> [Photo]
     {

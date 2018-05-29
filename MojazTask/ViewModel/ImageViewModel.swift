@@ -9,12 +9,13 @@
 import UIKit
 import SwiftyJSON
 
-class ImageViewMode: NSObject {
+class ImageViewModel : NSObject {
     
     var networkObj = NetworkServiceLayer()
     var viewControllerDelegate : UpdatePhotoListDelegate?
     
     open var photos : [Photo] = [Photo]()
+    open var filteredList : [Photo] = [Photo]()
     
     lazy var handlerBlock: (JSON) -> Void = { items in
         let photoArray = items.arrayObject
@@ -26,4 +27,12 @@ class ImageViewMode: NSObject {
        networkObj.fetchRequest(completion: handlerBlock, myurl: "https://jsonplaceholder.typicode.com/photos")
     }
    
+}
+extension ImageViewModel{
+    func updateFilteredList(photo : Photo) {
+        if filteredList.count <= 10 {
+            filteredList.append(photo)
+            NotificationCenter.default.post(name: .updatecount, object: nil)
+        }
+    }
 }
