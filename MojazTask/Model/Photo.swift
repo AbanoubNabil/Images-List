@@ -14,6 +14,7 @@ class Photo: NSObject {
     var title : String
     var url : String
     var placeholder : String
+    public var selected : Bool=false
     override init() {
         album_id = 0
         id=0

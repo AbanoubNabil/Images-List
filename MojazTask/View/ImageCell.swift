@@ -16,6 +16,8 @@ class ImageCell: UIView {
    
     @IBOutlet var contentView: UIView!
   
+    @IBOutlet weak var checkbox: Checkbox!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -26,6 +28,7 @@ class ImageCell: UIView {
     }
     private func commonInit() {
        setupNip()
+       setupChekbox()
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,5 +48,14 @@ class ImageCell: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
+    func setupChekbox(){
+        checkbox.checkedBorderColor = .red
+        checkbox.borderStyle = .circle
+        checkbox.checkmarkColor = .black
+        checkbox.checkmarkStyle = .tick
+        checkbox.increasedTouchRadius = 10
+        
+    }
+   
 }
 

@@ -29,10 +29,20 @@ class ImageViewModel : NSObject {
    
 }
 extension ImageViewModel{
-    func updateFilteredList(photo : Photo) {
-        if filteredList.count <= 10 {
-            filteredList.append(photo)
-            NotificationCenter.default.post(name: .updatecount, object: nil)
+    func updateFilteredList(photo : Photo , state : Bool ) {
+        
+        if filteredList.count < 10 && state {
+                filteredList.append(photo)
+                NotificationCenter.default.post(name: .updatecount, object: nil)
+        }else{
+            for itm in 0 ... filteredList.count-1{
+                if filteredList[itm].id==photo.id && filteredList[itm].album_id==photo.album_id{
+                    filteredList.remove(at: itm)
+                    NotificationCenter.default.post(name: .updatecount, object: nil)
+                }
+            }
+            
         }
+        
     }
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -87,6 +88,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2m-PD-lsa">
                                 <rect key="frame" x="100" y="603" width="175" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F2m-PD-lsa" secondAttribute="height" multiplier="175:34" id="UcZ-a7-abV"/>
+                                    <constraint firstAttribute="width" constant="175" id="gLY-Ef-mGp"/>
+                                </constraints>
                                 <state key="normal" title="save">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -107,10 +112,8 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZRS-cj-KN3" secondAttribute="trailing" id="1GA-6b-MOq"/>
                             <constraint firstItem="nKu-uK-GbL" firstAttribute="top" secondItem="ZRS-cj-KN3" secondAttribute="bottom" id="BlI-YO-wRe"/>
-                            <constraint firstItem="F2m-PD-lsa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="CWf-0z-D30"/>
                             <constraint firstItem="F2m-PD-lsa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HYa-pv-56S"/>
                             <constraint firstItem="nKu-uK-GbL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JfU-Ns-se0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F2m-PD-lsa" secondAttribute="trailing" constant="100" id="PfD-eR-pZm"/>
                             <constraint firstItem="nKu-uK-GbL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UoP-kZ-9VJ"/>
                             <constraint firstItem="ZRS-cj-KN3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yj0-cH-BpI"/>
                             <constraint firstItem="F2m-PD-lsa" firstAttribute="top" secondItem="nKu-uK-GbL" secondAttribute="bottom" constant="8" id="dRh-FM-cxo"/>
